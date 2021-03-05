@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #8093a5;
+	background-color: #3d4d5c;
 	color: #fff;
-	font-family: 'Patrick Hand', cursive;
+	font-family: 'Special Elite', cursive;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -22,7 +22,7 @@ h1 {
 }
 
 .instructions {
-    font-size: 30px;;
+    font-size: 25px;;
 }
 
 .game-container {
@@ -57,7 +57,7 @@ h1 {
 	display: flex;
 	position: absolute;
 	left: 50%;
-	bottom: 40%;
+	bottom: 15%;
 	transform: translateX(-50%);
 }
 
@@ -75,7 +75,7 @@ h1 {
 .figure-container {
 	fill: transparent;
 	stroke: #fff;
-	stroke-width: 8px;
+	stroke-width: 6px;
 	stroke-linecap: round;
 }
 
@@ -129,7 +129,7 @@ h1 {
 	position: absolute;
 	bottom: -1000px;
 	transition: transform 0.3s ease-in-out;
-    font-size: 24px;;
+    font-size: 16.9px;
 }
 
 .notification-container p {
@@ -137,5 +137,5 @@ h1 {
 }
 
 .notification-container.show {
-	transform: translateY(-750px);
+	transform: translateY(-722px);
 }
