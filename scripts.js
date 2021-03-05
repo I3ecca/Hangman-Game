@@ -37,6 +37,7 @@ function displayWord() {
     if(innerWord === selectedWord) {
         finalMessage.innerText = "Congratulations! \n\nYou won! \n\n😃";
         popup.style.display = "flex";
+        window.removeEventListener('keydown', checkLetter);
     }
   }
 
@@ -63,6 +64,7 @@ function displayWord() {
       if(wrongLetters.length === figureParts.length){
           finalMessage.innerText = "Sorry, you lost... \n😞";
           popup.style.display = "flex";
+          window.removeEventListener('keydown', checkLetter);
 
       }
 };
@@ -78,12 +80,9 @@ function displayWord() {
     }, 2000);
   }
 
-
-
-//Keydown letter press
-
-window.addEventListener('keydown', e => {
-    // console.log(e.keyCode);
+  const checkLetter = function(e) {
+    console.log(e.keyCode);
+    console.log(e.code);
     if (e.keyCode >= 65 && e.keyCode <= 90) {
       const letter = e.key;
   
@@ -105,7 +104,13 @@ window.addEventListener('keydown', e => {
         }
       }
     }
-  });
+
+  }
+
+
+//Keydown letter press
+
+window.addEventListener('keydown', checkLetter);
 
 
   // Restart game event listener playagain
@@ -122,7 +127,12 @@ window.addEventListener('keydown', e => {
     updateWrongLettersEl();
   
     popup.style.display = 'none';
+
+    window.addEventListener('keydown', checkLetter);
   });
 
 displayWord();
 
+const resetGame = function(){
+    
+}
