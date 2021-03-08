@@ -153,9 +153,3 @@ playAgainBtn.addEventListener('click', () => {
 
   window.addEventListener('keydown', checkLetter);
 });
-
-
-
-const resetGame = function() {
-
-}
